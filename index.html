@@ -64,6 +64,14 @@
       max-width: 400px;
       border-radius: 4px;
     }
+    .hidden-content {
+      display: none;
+      margin-top: 1rem;
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
     footer {
       background: #1e3d59;
       color: #fff;
@@ -114,9 +122,48 @@
   <section id="contato">
     <h2>Contato</h2>
     <p>Email: contato@rotanacional.com.br<br>
-    Telefone: (00) 1234-5678<br>
+    Telefone: (11) 3344-2211<br>
     Instagram: @rotanacional_log</p>
     <p><strong>Endereço:</strong><br>
-    Avenida Raul Monteiro
+    Estrada dos Tropeiros, nº 4500 – Bairro Industrial do Ipê Roxo<br>
+    Caburé-Mirim – Mutambá (MB)<br>
+    Funcionamento: Segunda a Sexta, das 08h às 17h</p>
+    <p><strong>CNPJ:</strong> 09.987.654/0001-00</p>
+  </section>
 
+  <section id="area-restrita">
+    <h2>Área Restrita</h2>
+    <div class="login-box">
+      <p><strong>Login:</strong> <input id="login" type="text" placeholder="Digite seu e-mail"></p>
+      <p><strong>Senha:</strong> <input id="senha" type="password" placeholder="Digite sua senha"></p>
+      <button onclick="verificarLogin()">Acessar</button>
+    </div>
+    <div id="conteudo-restrito" class="hidden-content">
+      <h3>Documentos Acessados</h3>
+      <p>Aqui estão os arquivos internos do colaborador Eduardo Freitas. (Simulação)</p>
+      <ul>
+        <li>relatorio_logistica_edf01.pdf</li>
+        <li>croche_dossie_funcional_leila.pdf</li>
+        <li>imagem_aerea_29A.png</li>
+      </ul>
+    </div>
+    <p><em>* Acesso exclusivo a colaboradores autorizados *</em></p>
+  </section>
 
+  <footer>
+    &copy; 2025 Rota Nacional Transportes e Logística LTDA
+  </footer>
+
+  <script>
+    function verificarLogin() {
+      const login = document.getElementById("login").value.trim();
+      const senha = document.getElementById("senha").value.trim();
+      if (login === "eduardo@rotanacional.com.br" && senha === "394AZUL") {
+        document.getElementById("conteudo-restrito").style.display = "block";
+      } else {
+        alert("Login ou senha incorretos.");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -9,18 +9,38 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      background: #f8f8f8;
       color: #333;
     }
     header {
       background-color: #1e3d59;
       color: #fff;
       padding: 2rem;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
     header img {
       height: 60px;
-      margin-bottom: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url("rota%20nacional.png") center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 2px #000;
+    }
+    .hero h1 {
+      font-size: 2rem;
     }
     section {
       max-width: 900px;
@@ -39,6 +59,17 @@
       max-width: 400px;
       margin-top: 1rem;
     }
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .image-gallery img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 4px;
+    }
     footer {
       background: #1e3d59;
       color: #fff;
@@ -50,18 +81,25 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo da Rota Nacional" />
-    <h1>ROTA NACIONAL</h1>
-    <p><em>Transportes e Logística LTDA</em><br/>Slogan: Transportando o Futuro</p>
+    <img src="5198b35c-c8a4-4a95-8293-67f77d171b6a.png" alt="Logo da Rota Nacional" />
+    <nav>
+      <a href="#quem-somos">Quem Somos</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+      <a href="#area-restrita">Área Restrita</a>
+    </nav>
   </header>
 
-  <section>
+  <div class="hero">
+    <h1>Transportando o Futuro</h1>
+  </div>
+
+  <section id="quem-somos">
     <h2>Quem Somos</h2>
-    <p>A Rota Nacional é uma empresa de transporte e logística com mais de 20 anos de atuação no território brasileiro. Fundada por Ariovaldo Brasil, ex-deputado e empresário do setor agroindustrial, a companhia cresceu com base em valores como compromisso, integridade e eficiência.</p>
-    <p>Consolidamos parcerias com órgãos públicos e empresas privadas, tornando-nos referência em transporte rodoviário de cargas especiais e operações em áreas de difícil acesso.</p>
+    <p>A Rota Nacional é uma empresa de transporte e logística com mais de 20 anos de atuação no território brasileiro...</p>
   </section>
 
-  <section>
+  <section id="servicos">
     <h2>Nossos Serviços</h2>
     <ul>
       <li>Transporte Rodoviário Nacional</li>
@@ -72,38 +110,29 @@
   </section>
 
   <section>
-    <h2>Onde Estamos</h2>
-    <p><strong>Unidade Operacional Principal:</strong><br>
-    Avenida Raul Monteiro, 1989 – Periferia Industrial<br>
-    Cidade fictícia, Estado fictício<br>
-    Segunda a Sexta – das 08h às 17h</p>
-
-    <p><strong>Base Antiga:</strong> Localização sigilosa – uso exclusivo para operações internas.</p>
+    <h2>Galeria da Frota</h2>
+    <div class="image-gallery">
+      <img src="c3825441-1ccf-43e9-8344-59c664387da4.png" alt="Caminhões com logo colorido">
+      <img src="f8e18a4d-4de4-469f-a727-39e9fc3838c9.png" alt="Rogério abastecendo o caminhão">
+      <img src="rota nacional.png" alt="Fachada da empresa">
+    </div>
   </section>
 
-  <section>
+  <section id="contato">
     <h2>Contato</h2>
     <p>Email: contato@rotanacional.com.br<br>
     Telefone: (00) 1234-5678<br>
-    Instagram: @rotanacional_log<br>
-    Atendimento: Segunda a sexta – das 9h às 18h</p>
+    Instagram: @rotanacional_log</p>
   </section>
 
-  <section>
-    <h2>Trabalhe Conosco</h2>
-    <p>Estamos sempre em busca de profissionais comprometidos com a excelência logística.</p>
-    <p>Envie seu currículo para: rh@rotanacional.com.br</p>
-    <p>Vagas disponíveis: administrativo, transporte, monitoramento, operação</p>
-  </section>
-
-  <section>
+  <section id="area-restrita">
     <h2>Área Restrita</h2>
     <div class="login-box">
       <p><strong>Login:</strong> <input type="text" placeholder="Digite seu login"></p>
       <p><strong>Senha:</strong> <input type="password" placeholder="Digite sua senha"></p>
       <button>Acessar</button>
     </div>
-    <p style="margin-top: 1rem;"><em>* Acesso exclusivo a colaboradores autorizados *</em></p>
+    <p><em>* Acesso exclusivo a colaboradores autorizados *</em></p>
   </section>
 
   <footer>
@@ -111,3 +140,4 @@
   </footer>
 </body>
 </html>
+
